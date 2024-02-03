@@ -1,2 +1,38 @@
 body {
   background-color: lightblue; }
+
+.footer {
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+.header {
+  background-color: #f8f9fa;
+  color: #495057;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  background-color: #343a40;
+  padding: 10px;
+  border-radius: 10px; }
+
+.sign_in_form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; }
+
+#sign_in_google {
+  background-color: white;
+  color: #000000;
+  max-width: 300px;
+  margin: 7px 500px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px; }

@@ -84,6 +84,7 @@ module.exports.create = async (req, res) => {
         const newUser = await User.create({
             name,
             email,
+            //password,
             password: hashedPassword,
         });
 
@@ -101,7 +102,13 @@ module.exports.createSession = (req, res) => {
 };
 
 module.exports.destroySession = (req, res) => {
-    req.logout();
-    req.flash('success', 'You have logged out');
-    return res.redirect('/');
+    req.logout((err) => {
+        if (err) {
+            console.log('Error in destroying session:', err);
+            return;
+        }
+        req.flash('success', 'You have logged out successfully!');
+        return res.redirect('/');
+    });
 };
+

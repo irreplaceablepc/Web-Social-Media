@@ -2,7 +2,7 @@
     <hr>
     <div id="home">
         <img src="/uploads/serverfile/logo.png" alt="logo">
-        <h3>Home</h3>
+        <h3 style="margin-left: 23%;">Home</h3>
     </div>
     <hr>
 <!--Home page end-->
@@ -23,19 +23,17 @@
     
     <section id="fright-side">
         <!-- Your existing code for the Posts section -->
-        <h4>Posts</h4>
-        <% if(locals.user) { %>
-            <form action="/posts/create" id="new-post-form" method="POST">
-                <textarea name="content" cols="30" rows="3" placeholder="type here...." required></textarea>
-                <input type="submit" value="Post">
-            </form>
-        <%}%>
+        <div style="padding-left: 70%;">
+            <h4>Posts</h4>
+        </div>
+        <div>
         <div id="posts-lists-container">
             <ul>
                 <% for(post of posts){ %>
                     <%- include('_post') -%>
                 <%} %>
             </ul>
+        </div>
         </div>
     </section>
 </div>

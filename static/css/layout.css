@@ -128,6 +128,7 @@ a:hover {
 #home {
   display: flex;
   align-items: center; /* Align items vertically at the center */
+  padding-left: 6%;
 }
 
 #home img {
@@ -150,7 +151,7 @@ a:hover {
 
 .vertical-line {
   border-left: 1px solid #000; /* Adjust color and width as needed */
-  height: 500px; /* Adjust height as needed */
+  max-height: 100000px; /* Adjust height as needed */
   margin-left: 1%; /* Adjust margin as needed */
 }
 
@@ -158,9 +159,30 @@ a:hover {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding-left: 1%; /* Adjust left padding */
+  padding-left: 5%; /* Adjust left padding */
   padding-right: 65%; /* Adjust right padding */
+  padding-bottom: 35%;
+  
+  height: 120%; /* Adjust the height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x:hidden;
+  position: relative;
 }
+
+#posts-lists-container {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#new-post-form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 
 
 

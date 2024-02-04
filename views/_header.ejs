@@ -3,8 +3,7 @@
         <h1 class="header">ConnectWithFriends</h1>
     </div>
 
-    
-
+    <div>
         <% if(locals.user) { %>
             <li>
                 <a href="/users/profile/<%=user.id%>">
@@ -14,6 +13,15 @@
             <li>
                 <a href="/users/sign-out">Sign out</a>
             </li>
+    </div>
+        <div>
+            <% if(locals.user) { %>
+                <form action="/posts/create" method="POST">
+                    <textarea name="content" cols="30" rows="3" placeholder="type here...." required></textarea>
+                    <input type="submit" value="Post">
+                </form>
+            <%}%>
+        </div>
         <% } else { %>
         <div id="container">
             <div id="left-side">

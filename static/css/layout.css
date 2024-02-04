@@ -124,3 +124,43 @@ a:hover {
             font-family: 'Arial', sans-serif;
             border-radius: 5px;
 }
+
+#home {
+  display: flex;
+  align-items: center; /* Align items vertically at the center */
+}
+
+#home img {
+  width: 5%;
+  height: 5%;
+}
+
+
+/* feed-user right left */
+#fcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+}
+
+#fleft-side {
+  margin-left: 1%;
+}
+
+.vertical-line {
+  border-left: 1px solid #000; /* Adjust color and width as needed */
+  height: 500px; /* Adjust height as needed */
+  margin-left: 1%; /* Adjust margin as needed */
+}
+
+#fright-side {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1%; /* Adjust left padding */
+  padding-right: 65%; /* Adjust right padding */
+}
+
+
+

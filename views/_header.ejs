@@ -17,7 +17,13 @@
         <% } else { %>
         <div id="container">
             <div id="left-side">
-                <h1>ConnectWithFriends</h1>
+                <div>
+                    <h1 style="font-size: 50px;">ConnectWithFriends</h1>
+                </div>
+                <div>
+                    <h2 style="color: black;">ConnectWithFriends helps you connect and share with the people in your life.</h2>
+                </div>
+                
             </div>
             <div id="right-side">
                 <!-- Your login form here -->
@@ -28,8 +34,8 @@
                     <input type="submit" value="Sign in" style="color: white; background-color: #007BFF;">
                 </form>
                 <hr>
-                <div>
-                    <p>Page for <b>Kamine</b> Dost</p>
+                <div style="text-align: center;">
+                    <p>Page for <b>College Student Friend</b></p>
                 </div>
                 </div>
 
@@ -49,7 +55,7 @@
                 </div>
 
                 <!-- Link to toggle between sign-in and sign-up -->
-                <div style="background-color: #4caf50; border-radius: 10px; padding: 12px;">
+                <div id="tbc" style="background-color: #4caf50; border-radius: 10px; padding: 15px; margin-top: 5%;">
                     <a href="#" id="toggle-link" style="color: white;">Create New Account</a>
                 </div>
                 
@@ -61,15 +67,18 @@
                 const signInForm = document.getElementById('signin-form');
                 const signUpForm = document.getElementById('signup-form');
                 const toggleLink = document.getElementById('toggle-link');
+                const rightSideContainer = document.getElementById('tbc');
 
                 toggleLink.addEventListener('click', function () {
                     if (signInForm.style.display === 'block') {
                         signInForm.style.display = 'none';
                         signUpForm.style.display = 'block';
+                        rightSideContainer.style.backgroundColor = '#007BFF'
                         toggleLink.innerText = 'Sign In';
                     } else {
                         signInForm.style.display = 'block';
                         signUpForm.style.display = 'none';
+                        rightSideContainer.style.backgroundColor = '#4caf50';
                         toggleLink.innerText = 'Create New Account';
                     }
                 });

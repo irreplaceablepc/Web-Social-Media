@@ -1,23 +1,60 @@
 <header >
-    
-    <h1 class="header">ConnectWithFriends</h1>
-    <ul>
-        <% if(locals.user) {%>
+    <div>
+        <h1 class="header">ConnectWithFriends</h1>
+    </div>
+
+    <div id="container">
+        <div id="left-side">
+            <h1>ConnectWithFriends</h1>
+        </div>
+
+        <% if(locals.user) { %>
             <li>
                 <a href="/users/profile/<%=user.id%>">
-                    <%= user.name%>                
+                    <%= user.name %>
                 </a>
             </li>
             <li>
                 <a href="/users/sign-out">Sign out</a>
             </li>
-        <% } else{ %>
-            <li>
-                <a href="/users/sign-in">Sign In</a>
-            </li>
-            <li>
-                <a href="/users/sign-up">Sign Up</a>
-            </li>
-        <%}%>
-    </ul>
+        <% } else { %>
+            <div id="right-side">
+                <!-- Your login form here -->
+                <form action="/users/create-session" method="POST" id="signin-form">
+                    <input type="text" name="email" id="email" placeholder="Your Email" required>
+                    <input type="password" name="password" id="password" placeholder="Your Password" required>
+                    <input type="submit" value="Sign in">
+                </form>
+
+                <!-- Your signup form here -->
+                <form action="/users/sign-up" method="POST" id="signup-form" style="display:none;">
+                    <!-- Include your signup form fields here -->
+                </form>
+
+                <!-- Link to toggle between sign-in and sign-up -->
+                <a href="#" id="toggle-link">Create New Account</a>
+            </div>
+
+            <script>
+                // JavaScript to toggle between sign-in and sign-up
+                const signInForm = document.getElementById('signin-form');
+                const signUpForm = document.getElementById('signup-form');
+                const toggleLink = document.getElementById('toggle-link');
+
+                toggleLink.addEventListener('click', function () {
+                    if (signInForm.style.display === 'block') {
+                        signInForm.style.display = 'none';
+                        signUpForm.style.display = 'block';
+                    } else {
+                        signInForm.style.display = 'block';
+                        signUpForm.style.display = 'none';
+                    }
+                });
+            </script>
+        <% } %>
+    </div>
+    <div>
+        <p style="margin-left: 730px;">Create a Page for a celebrity, brand or business.</p>
+    </div>
+    
 </header>

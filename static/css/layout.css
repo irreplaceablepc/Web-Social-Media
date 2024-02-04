@@ -23,7 +23,8 @@ body {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: left; }
+  text-align: left;
+}
 
 #sign_in_google {
   background-color: white;

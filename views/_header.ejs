@@ -3,10 +3,7 @@
         <h1 class="header">ConnectWithFriends</h1>
     </div>
 
-    <div id="container">
-        <div id="left-side">
-            <h1>ConnectWithFriends</h1>
-        </div>
+    
 
         <% if(locals.user) { %>
             <li>
@@ -18,17 +15,21 @@
                 <a href="/users/sign-out">Sign out</a>
             </li>
         <% } else { %>
+        <div id="container">
+            <div id="left-side">
+                <h1>ConnectWithFriends</h1>
+            </div>
             <div id="right-side">
                 <!-- Your login form here -->
                 <div id="signin-form">
                 <form action="/users/create-session" method="POST">
                     <input type="text" name="email" id="email" placeholder="Your Email" required>
                     <input type="password" name="password" id="password" placeholder="Your Password" required>
-                    <input type="submit" value="Sign in">
+                    <input type="submit" value="Sign in" style="color: white; background-color: #007BFF;">
                 </form>
                 <hr>
                 <div>
-                    <p>Page for Kamine Dost</p>
+                    <p>Page for <b>Kamine</b> Dost</p>
                 </div>
                 </div>
 
@@ -48,9 +49,12 @@
                 </div>
 
                 <!-- Link to toggle between sign-in and sign-up -->
-                <a href="#" id="toggle-link">Create New Account</a>
+                <div style="background-color: #4caf50; border-radius: 10px; padding: 12px;">
+                    <a href="#" id="toggle-link" style="color: white;">Create New Account</a>
                 </div>
+                
             </div>
+        </div>
 
             <script>
                 // JavaScript to toggle between sign-in and sign-up
@@ -71,6 +75,4 @@
                 });
             </script>
         <% } %>
-    </div>
-    
 </header>
